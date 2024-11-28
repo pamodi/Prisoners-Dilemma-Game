@@ -1,0 +1,199 @@
+.settings {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #d3d5e400, #efefef91);
+    height: max-content;
+}
+
+.settings-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.settings-column {
+    flex: 1 1 calc(50% - 50px);
+    min-width: 280px;
+}
+
+.settings-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.settings-input,
+.settings-select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.settings-input:focus,
+.settings-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.start-game-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+    align-items: center;
+    justify-self: self-end;
+    display: flex;
+}
+
+.start-game-btn:hover {
+    background-color: #0056b3;
+}
+
+.reset-game-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+    display: flex;
+}
+
+.reset-game-btn:hover {
+    background-color: #da515e;
+}
+
+.go-back-btn {
+    background-color: #6c757d;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+    display: flex;
+}
+
+.go-back-btn:hover {
+    background-color: #5a6268;
+}
+
+.game-section {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background: linear-gradient(135deg, #d3d5e400, #efefef91);
+}
+
+.game-app {
+    font-family: Arial, sans-serif;
+    padding: 15px;
+    background-color: #f4f4f4;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-image: url("../images/background.svg");
+    border-radius: 12px;
+}
+
+.game-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 8px;
+}
+
+.scores,
+.history {
+    flex: 1;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #d3d5e400, #efefef91);
+}
+
+.subsection-title {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.score-box,
+.history-box {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    background: linear-gradient(135deg, #d3d5e400, #efefef91);
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #d3d5e400, #efefef91);
+}
+
+.chart-container {
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    color: #fff;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+.back-button:focus {
+    outline: none;
+}

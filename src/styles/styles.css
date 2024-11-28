@@ -1,0 +1,281 @@
+.app {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-image: url("../images/background.jpg");
+    border-radius: 12px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #ffff;
+}
+
+.header h2 {
+    font-size: 1.8rem;
+    color: #ffff;
+    text-align: left;
+}
+
+.how-to-play-content {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.how-to-play-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.how-to-play-content li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: left;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.current-round {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.header-content {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.how-to-play-content {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 25px;
+    background: linear-gradient(135deg, #d3d5e400, #efefef91);
+    /* Gradient background */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    animation: fadeIn 1s ease-out;
+    /* Animation for the whole content */
+}
+
+.subtitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #f7f7f7;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* List styling */
+.instructions {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.instruction-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.instruction-item:hover {
+    transform: translateX(10px);
+    /* Slide effect on hover */
+}
+
+/* Icons */
+.instruction-icon {
+    font-size: 2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Cooperative Icon */
+.cooperative {
+    color: #4caf50;
+}
+
+.cooperative:hover {
+    transform: rotate(360deg);
+    /* Spin effect for cooperative icon */
+    color: #388e3c;
+}
+
+/* Defect Icon */
+.defect {
+    color: #f44336;
+}
+
+.defect:hover {
+    transform: rotate(180deg);
+    /* Rotate defect icon */
+    color: #d32f2f;
+}
+
+/* Mutual Defect Icon */
+.mutual-defect {
+    color: #ff9800;
+}
+
+.mutual-defect:hover {
+    transform: scale(1.2);
+    /* Grow effect for mutual defect icon */
+    color: #f57c00;
+}
+
+/* Animation for fading in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.go-to-game-btn,
+.random-rounds-btn animated-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    justify-self: self-end;
+    width: fit-content;
+    border-radius: 8px;
+}
+
+.go-to-game-btn:hover {
+    background-color: #45a049;
+}
+
+.settings {
+    background-color: #f4f6f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.settings-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.settings-column {
+    width: 48%;
+    margin-bottom: 20px;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.settings-select:focus,
+.settings-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.animated-dropdown {
+    animation: slideIn 0.3s ease;
+}
+
+.animated-input {
+    animation: inputFadeIn 0.4s ease;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes inputFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.random-rounds-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.random-rounds-btn:hover {
+    background-color: #218838;
+}
+
+.header {
+    background-size: cover;
+    text-align: center;
+}

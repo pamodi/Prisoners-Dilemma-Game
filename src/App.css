@@ -1,0 +1,33 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .header, .settings, .game-section {
+    padding: 20px;
+    flex: 1;
+  }
+  
+  .header {
+    background: #f0f8ff;
+    text-align: center;
+  }
+  
+  .settings, .game-section {
+    overflow-y: auto;
+  }
+  
+  .settings-container, .game-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .chart-container, .history-box {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
