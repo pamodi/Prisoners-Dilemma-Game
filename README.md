@@ -46,8 +46,15 @@ To run the project locally, follow these steps:
 ### Resetting the Game
 To start over, click the **Reset Game** button to clear the results and set the default values.
 
+### Chart.js Usage
+- **Charts for Statistics**: Chart.js is used to visually display the statistics for Player 1 and Player 2, such as the number of cooperations and defections in each round.
+- **Graph Types**: The game uses line charts to show the cooperative vs. defected moves of each player throughout the rounds.
+- **Dynamic Updates**: The chart updates dynamically after each round, providing a real-time view of the progress.
+
 ## Technologies Used
 - **React.js** for the frontend.
 - **React Router** for navigation.
 - **CSS** for basic styling.
+- **Chart.js** for displaying statistics in graphical form.
+- **Jest** for testing the application.
 
