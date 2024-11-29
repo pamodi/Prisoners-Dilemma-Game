@@ -35,7 +35,7 @@ const strategies = {
     "Defect-Defect": [1, 1]
   };
 
-describe('App Component', () => {
+describe('Prisoner\'s Dilemma Strategies', () => {
   
     test("Calculates correct payoff for Cooperate-Cooperate", () => {
         const result = payoffs["Cooperate-Cooperate"];
@@ -66,6 +66,36 @@ describe('App Component', () => {
         const nextMoveByGrimTrigger = strategy.logic(history1, history2);
         
         expect(nextMoveByGrimTrigger).toBe("Defect");
+    });
+
+    test("Grim Trigger: Cooperates initially", () => {
+        const result = strategies.GrimTrigger.logic([], []);
+        expect(result).toBe("Cooperate");
+    });
+
+    test("Random: Returns either 'Cooperate' or 'Defect'", () => {
+        const result = strategies.Random.logic();
+        expect(["Cooperate", "Defect"]).toContain(result);
+      });
+
+    test("Always Cooperate: Always chooses 'Cooperate'", () => {
+        const result = strategies.AlwaysCooperate.logic([], []);
+        expect(result).toBe("Cooperate");
+    });
+
+    test("Always Defect: Always chooses 'Defect'", () => {
+        const result = strategies.AlwaysDefect.logic([], []);
+        expect(result).toBe("Defect");
+    });
+});
+
+describe("Payoff Logic", () => {
+    test("Cooperate-Cooperate: Both players receive 3 points", () => {
+      expect(payoffs["Cooperate-Cooperate"]).toEqual([3, 3]);
+    });
+  
+    test("Cooperate-Defect: Player 1 gets 0, Player 2 gets 5", () => {
+      expect(payoffs["Cooperate-Defect"]).toEqual([0, 5]);
     });
 });
 
