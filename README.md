@@ -46,10 +46,32 @@ To run the project locally, follow these steps:
 ### Resetting the Game
 To start over, click the **Reset Game** button to clear the results and set the default values.
 
-### Chart.js Usage
+### Chart.js 
 - **Charts for Statistics**: Chart.js is used to visually display the statistics for Player 1 and Player 2, such as the number of cooperations and defections in each round.
 - **Graph Types**: The game uses line charts to show the cooperative vs. defected moves of each player throughout the rounds.
 - **Dynamic Updates**: The chart updates dynamically after each round, providing a real-time view of the progress.
+
+### Game Strategies
+
+1. **Tit-for-Tat**
+- **Description**: This strategy starts by cooperating in the first round. In subsequent rounds, it mirrors the opponent's previous move. If the opponent cooperated in the previous round, Tit-for-Tat cooperates; if the opponent defected, Tit-for-Tat defects.
+- **Key Characteristic**: Encourages cooperation but retaliates against defection immediately.
+
+2. **Grim Trigger**
+- **Description**: This strategy starts by cooperating and continues to cooperate as long as the opponent also cooperates. However, if the opponent defects even once, Grim Trigger will defect for all remaining rounds.
+- **Key Characteristic**: Forgives no defection, enforcing long-term cooperation or punishment.
+
+3. **Always Cooperate**
+- **Description**: This strategy always chooses to cooperate regardless of the opponent’s moves.
+- **Key Characteristic**: Simple and optimistic, but vulnerable to exploitation by defectors.
+
+4. **Always Defect**
+- **Description**: This strategy always chooses to defect, regardless of the opponent’s moves.
+- **Key Characteristic**: Opportunistic and aggressive, but may not perform well against cooperative strategies.
+
+5. **Random**
+- **Description**: This strategy makes a random choice between cooperating and defecting in each round.
+- **Key Characteristic**: Unpredictable, making it difficult for opponents to plan their responses.
 
 ## Technologies Used
 - **React.js** for the frontend.
