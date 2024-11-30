@@ -93,15 +93,18 @@ const Settings = ({
             >
               <strong style={{ color: "white" }}>Number of Rounds:</strong>
               <div className="input-container">
-                <input
-                  type="number"
-                  value={rounds}
-                  onChange={e => setRounds(parseInt(e.target.value, 10))}
-                  min="1"
-                  max="1000"
-                  disabled={isGameRunning}
-                  className="settings-input animated-input"
-                  style={{width:"-webkit-fill-available" }}
+              <input
+                type="number"
+                value={rounds}
+                onChange={(e) => {
+                    const value = Math.min(Math.max(parseInt(e.target.value, 10), 1), 1000);
+                    setRounds(isNaN(value) ? 1 : value);
+                }}
+                min="1"
+                max="1000"
+                disabled={isGameRunning}
+                className="settings-input animated-input"
+                style={{ width: "-webkit-fill-available" }}
                 />
                 <motion.div
                   className="dropdown-arrow"
